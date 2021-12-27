@@ -19,8 +19,8 @@ public class EmailController {
     public String sendMail() {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setText("Spring Boot Application. Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        message.setTo("emailto@email.com");//Email que recebe a mensagem
-        message.setFrom("emailfrom@email.com");//Email que envia a mensagem
+        message.setTo("inserir o e-mail aqui");//Email que recebe a mensagem
+        message.setFrom("inserir o e-mail aqui");//Email que envia a mensagem
 
         try {
             mailSender.send(message);
@@ -37,7 +37,7 @@ public class EmailController {
             MimeMessage mail = mailSender.createMimeMessage();
 
             MimeMessageHelper helper = new MimeMessageHelper( mail );
-            helper.setTo( "emailto@email.com" );//Email que recebe a mensagem
+            helper.setTo( "inserir o e-mail aqui" );//Email que recebe a mensagem
             helper.setSubject( "Teste Envio de e-mail" );
             helper.setText("<p>Spring Boot Application. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>", true);
             mailSender.send(mail);
